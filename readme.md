@@ -4,15 +4,15 @@ Functions to plot numpy arrays and single channel images with a Bokeh HoverTool 
 See examples and function docstring for tips on how to use and modify to taste.
 
 ## Usage
-
 Copy and paste the functions to taste. Alternately, you can check this project out into your overall project directory. If your project is already a git repository, you can use
-
-`git submodule add git@github.com:alexwhittemore/bokeh_im_hovertool.git`
-
+```
+git submodule add git@github.com:alexwhittemore/bokeh_im_hovertool.git
+```
 to clone the repo as a submodule. Then, inside your project,
-
-`import bokeh_im_hovertool.image_with_hovertool as im_ht
-im_ht.plot_with_hovertool(yourdata)`
+```python
+import bokeh_im_hovertool.image_with_hovertool as im_ht
+im_ht.plot_with_hovertool(yourdata)
+```
 
 
 ## Examples
