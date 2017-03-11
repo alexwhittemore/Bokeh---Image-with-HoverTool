@@ -13,6 +13,7 @@ to clone the repo as a submodule. Then, inside your project,
 import bokeh_im_hovertool.image_with_hovertool as im_ht
 im_ht.plot_with_hovertool(yourdata)
 ```
+Additional data can be added quite easily by simply appending a dictionary of further same-sized arrays. An example is provided in image_with_hovertool_example.py
 
 ## Warnings/caveats
 The methodology used for plotting datasets this way is pretty inefficient. As a rule of thumb, you probably shouldn't try to plot data larger than ~1000 pixels or so. 50x50 grid of values? Probably no issue. Full sized jpeg from your DSLR? Don't even bother trying.
