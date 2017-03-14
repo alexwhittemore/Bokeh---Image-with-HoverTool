@@ -98,9 +98,14 @@ def plot_with_hovertool(array_to_plot,
 
     # Add any additional data to the source to include in the HoverTool
     if add_layers is not None:
-        # Reshape the additional layers to the list the dict expects
+        # Reshape the additional layers to the list the dict expects,
+        # if they aren't already
         for key in add_layers:
-            add_layers[key] = np.reshape(add_layers[key], [1, x*y])[0]
+            if type(add_layers[key]) is np.ndarray:
+                add_layers[key] = np.reshape(add_layers[key], [1, x*y])[0]
+            else:
+                if not (type(add_layers[key]) is list):
+                    raise TypeError("Data for key '{}' is not an array or list.".format(key))
         # Concatenate the two dictionaries together.
         data_dict.update(add_layers)
 
