@@ -113,7 +113,7 @@ def plot_with_hovertool(array_to_plot,
         data=data_dict
     )
 
-    output_file("toolbar.html")
+    output_file("bokeh_image.html")
     tools = [BoxSelectTool(), HoverTool()]
 
     p = figure(plot_width=600, plot_height=600, title=None, tools=tools)
